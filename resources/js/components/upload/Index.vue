@@ -56,9 +56,6 @@
 		<div class="form-group">
 			<div class="card">
 				<div class="card-body">
-					<audio controls="controls" autobuffer="autobuffer" autoplay="autoplay">
-					    <source src="http://127.0.0.1:8000/audio/songs/1602477407.ogg"/>
-					</audio>
 		    		<audio controls>
 						<source src="http://www.w3schools.com/html/horse.ogg" type="audio/ogg" />
 						<source src="http://www.w3schools.com/html/horse.mp3" type="audio/mpeg" />

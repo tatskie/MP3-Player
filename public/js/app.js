@@ -2169,9 +2169,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -39232,24 +39229,6 @@ var staticRenderFns = [
     return _c("div", { staticClass: "form-group" }, [
       _c("div", { staticClass: "card" }, [
         _c("div", { staticClass: "card-body" }, [
-          _c(
-            "audio",
-            {
-              attrs: {
-                controls: "controls",
-                autobuffer: "autobuffer",
-                autoplay: "autoplay"
-              }
-            },
-            [
-              _c("source", {
-                attrs: {
-                  src: "http://127.0.0.1:8000/audio/songs/1602477407.ogg"
-                }
-              })
-            ]
-          ),
-          _vm._v(" "),
           _c("audio", { attrs: { controls: "" } }, [
             _c("source", {
               attrs: {

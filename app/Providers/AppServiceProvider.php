@@ -26,21 +26,11 @@ class AppServiceProvider extends ServiceProvider
     {
         Validator::extend('base64mp3', function ($attribute, $value, $parameters, $validator) {
             $explode = explode(',', $value);
-            $allow = ['mpeg', 'ogg', 'mp3'];
-            $format = str_replace(
-                [
-                    'data:audio/mpeg',
-                    ';',
-                    'base64',
-                ],
-                [
-                    '', '', '',
-                ],
-                $explode[0]
-            );
+            $extension = explode('/', mime_content_type($value))[1];
+            $allow = ['mpeg', 'mp3'];
 
             // check file format
-            if (!in_array($format, $allow)) {
+            if (!in_array($extension, $allow)) {
                 return false;
             }
 

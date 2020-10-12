@@ -43,12 +43,12 @@ class SongController extends Controller
 
         $request->validate([
             'title'=>'required',
-            'mp3' => 'required'
+            'mp3' => 'required|base64mp3'
         ], $messages);
 
         if ($request->input('mp3')) {
-            $name = time().'.' . explode('/', explode(':', substr($request->input('mp3'), 0, strpos($request->input('mp3'), ';')))[1])[1];
-            file_put_contents('audio/songs/'.$name, $name);
+            $name = time().'.' . 'mp3';
+            file_put_contents('audio/songs/'.$name, base64_decode($request->input('mp3')));
         }
 
         $song = new Song([
